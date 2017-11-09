@@ -1,0 +1,156 @@
+// Mixins
+@import "../mixins";
+
+// Timeline
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+#timeline {
+	line-height: 1.5em;
+	font-size: 14px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	position: relative;
+	@include prefix(transition, all .4s ease);
+
+	&:before {
+		content:"";
+		width: 3px;
+		height: 100%;
+		background: $color-fortext;
+		left: 50%;
+		top: 0;
+		position: absolute;
+	}
+
+	&:after {
+		content: "";
+		clear: both;
+		display: table;
+		width: 100%;
+	}
+	
+	.timeline-item {
+		margin-bottom: 50px;
+		position: relative;
+		@extend %clearfix;
+
+		.timeline-icon {
+			background: $color-white;
+			border: 2px solid $color-fortext;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			left: 46.8%;
+			overflow: hidden;
+			@include prefix(border-radius, 50%);
+			text-align: center;
+			padding-top: 7.5px;
+			&:before{
+				width: 35px;
+				height: 35px;
+				color: $color-fortext;
+				font-size: 30px;
+
+			}
+			img {
+				color: $color-fortext;
+				position: relative;
+				top: 14px;
+				left: 14px;
+			}
+		}
+
+		.timeline-content {
+			width: 45%;
+			background: #fff;
+			padding-left: 20px;
+			padding-right: 20px;
+			@include prefix(box-shadow, 0 3px 3px rgba(0,0,0,0.1));
+			@include prefix(border-radius, 5px);
+			@include prefix(transition, all .3s ease);
+
+			h3 {
+				padding: 15px;
+				// border: 2px solid $color-;
+				background: $color-fortext;
+				color: $color-white;
+				margin: -20px -20px 0 -20px;
+				font-weight: 300;
+				@include prefix(border-radius, 3px 3px 0 0);
+				line-height: 25px;
+			}
+			.time-text{
+				width: 100%;
+				li{
+				font-size: 15px;
+			  	font-weight: 400;
+			  	font-family: Hind, sans-serif;
+			  	color: #828282;
+			  	line-height: 1.4;
+			  	text-align: justify;
+			  	}	
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				left: 45%;
+				top: 20px;
+				width: 0; 
+				height: 0; 
+				border-top: 7px solid transparent;
+				border-bottom: 7px solid transparent; 
+				border-left:7px solid $color-fortext; 
+			}
+
+			&.right {
+				float: right;
+				margin-top: 20px;
+				&:before {
+					content: '';
+					right: 45%;
+					left: inherit;
+					border-left: 0;
+					border-right: 7px solid $color-fortext;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-sm-max){
+	#timeline {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		padding: 0;
+		&:before {
+			left: 23px;
+		}
+		
+		.timeline-item {
+			.timeline-content {
+				width: 90%;
+				float: right;
+				margin-top: 15px;
+				&.right{
+					margin-top: 20px;
+				}
+				&:before, &.right:before {
+					left: 10%;
+					margin-left: -6px;
+					border-left: 0;
+					border-right: 7px solid $color-fortext;
+				}
+			}
+
+			.timeline-icon {
+				left: 0;
+			}
+		}
+	}
+}

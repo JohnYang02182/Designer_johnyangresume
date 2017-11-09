@@ -1,0 +1,60 @@
+/*----------------------------------------------------------------------
+
+	MASTER STYLESHEET
+
+	Project:       John's resume
+-----------------------------------------------------------------------*/
+
+// Custom
+// =================================================================
+
+@import 'mixins'; // Mixins
+@import 'variables'; // Variables
+
+// Base
+// =================================================================
+
+@import 'base/base'; // Base
+
+
+// Components
+// =================================================================
+
+@import 'components/button'; // Button
+@import 'components/progress-bar'; // Progress Bar
+@import 'components/social-icons'; // Social Icons
+
+
+// Gui
+// =================================================================
+
+@import 'gui/promo-banner'; // Promo Banner
+@import 'gui/promo-block'; // Promo Block
+@import 'gui/service'; // Service
+
+
+// Layout
+// =================================================================
+
+@import 'layout/footer'; // Footer
+@import 'layout/header'; // Header
+
+
+// Plugins
+// =================================================================
+
+@import 'plugins/back-to-top'; // Back To Top
+@import 'plugins/swiper'; // Swiper
+@import 'plugins/timeline';// Timeline
+
+
+// Utils
+// =================================================================
+
+@import 'utils/colors'; // Colors
+@import 'utils/helpers'; // Helpers
+
+// Customchange
+// =================================================================
+
+@import 'mychange'; //Mychange

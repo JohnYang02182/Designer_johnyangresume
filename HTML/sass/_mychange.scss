@@ -1,0 +1,163 @@
+.promo-block{
+    padding-bottom: 300px;   
+}
+.promo-block-title{
+    text-align: center;
+    font-weight: 400;
+}
+.promo-block-text{
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 10px;
+}
+.list-inline{
+    text-align: center;
+}
+.aboutme{
+    line-height: 1.6;
+    text-align: justify;
+}
+.service-text{
+    text-align: justify;
+}
+
+.time-text{
+    margin-top: 15px;
+    padding-left: 15px;
+}
+.section-end{
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+}
+.list-inline{
+    .social-icons{
+       background-color: rgba(0,0,0,0);
+       border: 0.5px solid $color-white;
+       color: $color-white;
+       &:hover{
+            background-color: $color-white;
+            color: $color-base;
+       }
+    }
+
+}
+.modal{
+    padding-right: 0px !important;
+    .modal-content{
+        overflow-x: hidden;
+        border-radius: 0;
+        width: 100%;
+        min-height: 100%;
+        .close-modal{
+            width: 75px;
+            height: 75px;
+            postition: relative;
+            float: right;
+            margin: 10px 10px;
+            .lr{
+                z-index: 1051;
+                width: 1px;
+                height: 75px;
+                margin-left: 35px;
+                background-color: #364F6B;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                .rl{
+                    z-index: 1052;
+                    width: 1px;
+                    height: 75px;
+                    background-color: #364F6B;
+                    -webkit-transform: rotate(90deg);
+                    -ms-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        .container{
+           .row{
+                .myarea{
+                    .mycontant{
+                        h2{
+                            margin-top: 75px;
+                            text-align: center;
+                            margin-bottom: 40px;
+                        }
+                        .k8img{
+                            width: 100%;
+                        }
+                        .resume{
+                            margin: 40px 0;
+                        }
+                        h3{
+                            margin: 30px 0;
+                            text-align: left;
+                            color: $color-subtitle;
+                        }
+                        .k8h5{
+                            margin-top: 20px;
+                            color: gray;
+                        }
+                        p{
+                            margin: 0;
+                            color: #828282;
+                        }
+                        ul{
+                            margin-top: 15px;
+                            li{
+                                @include font($size: 15px, $weight: 400, $family: $font-family-base);
+                                line-height: 1.4;
+                                color: #828282;
+                            }
+                        }
+                        .mylink{
+                            color: $color-subtitle;
+                            font-size: 20px; 
+                            text-align: center;
+                            margin-bottom: 30px;
+                            a{
+                                color: $color-subtitle;
+                            }
+                        }
+                        .prototyping{
+                            text-align: center;
+                            width: 40%;
+                            position: relative;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            margin: 40px 0; 
+                        }
+                        .button_00{
+                            width: 200px;
+                            height: 50px;
+                            text-align: center;
+                            border-radius: 3px;
+                            background-color: $color-fortext;
+                            margin-bottom: 100px; 
+                            position: relative;
+                            left: 50%;
+                            transform: translateX(-50%);                           
+                            color: white;
+                            line-height: 50px;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: $screen-sm-max) {
+     .row{
+        .myarea{
+            .mycontant{
+                h2{
+                    margin-top: 100px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: $screen-xs-max) {
+    
+}
